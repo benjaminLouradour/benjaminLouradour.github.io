@@ -1,0 +1,99 @@
+/**************************************************************************************************
+*                                                                                                 *
+* Game and code by Benjamin Louradour                                                             *
+*                                                                                                 *
+***************************************************************************************************/
+
+/**************************************************************************************************
+*                                                                                                 *
+* Creation : 10/10/2014                                                                           *
+*                                                                                                 *
+* Last update : 09/11/2015                                                                        *
+***************************************************************************************************/
+
+body {
+    text-align: center;
+    background: #112748;
+    color: #35a6f2;
+    font-weight: bold;
+    font-family: "Arial Black";
+    width: 100%;
+    margin: 0;
+}
+
+h1 {
+    color: #F9F9F8;
+    font-family: "Arial Black";
+    font-size: 200%;
+}
+
+#hud {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 2px;
+}
+
+#scores, #playGame {
+    float: left;
+    text-align: left;
+    margin-left: 25%;
+    font-family: "Arial Black";
+    font-size: 90%;
+}
+
+#bestScore, #currentScore {
+    display: inline-block;
+    color: #F9F9F8;
+}
+
+#game {
+    width: 800px;
+    height: 600px;
+    margin: 0 auto;
+    background: #3e6e78;
+    border: 1px solid #433942;
+}
+
+#myCanvas {
+    border: 1px solid black;
+	display: inline-block;
+    margin-left: 0px;
+    margin-top: 18px;
+    padding: 0;
+}
+
+#howTo, #infos {
+    width: 100%;
+    margin: 0 auto;
+}
+
+#howTo {
+    margin-top: 20px;
+}
+
+h2 {
+    float: left;
+    width: 25%;
+    color: #e5f1ef;
+}
+
+#howTo p, #infos p {
+    float: left;
+    width: 65%;
+    font-weight: normal;
+    text-align: justify;
+    font-family: "Arial";
+    margin-bottom: 50px;
+    margin-top: 10px;
+}
+
+#social {
+    width: 100%;
+    margin: 0 auto;
+}
+
+#twitter, #paypal {
+    float: left;
+    width: 50%;
+    margin-top: 20px;
+}

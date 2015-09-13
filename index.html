@@ -1,0 +1,95 @@
+<!--
+/**************************************************************************************************
+*                                                                                                 *
+* Game and code by Benjamin Louradour                                                             *
+* Any part of this code (except jquery and twitter) was written by me and is free to use.         *
+*                                                                                                 *
+* This game was an occasion for me to learn a bit of html5 canvas element. So it is not very      *
+* polished, but everything is working. It has also sadly a lot of hard coding, but hopefully I    *
+* try to keep the code commented.                                                                 *
+*                                                                                                 *
+* You can contact me at benjamin.louradour@gmail.com if you want more informations                *
+***************************************************************************************************/
+
+/**************************************************************************************************
+*                                                                                                 *
+* Creation : 10/10/2014                                                                           *
+*                                                                                                 *
+* Last update : 09/11/2015                                                                        *
+***************************************************************************************************/
+-->
+<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Saving private RedSquare</title>
+        <link type="text/css" rel="stylesheet" href="css/gameStyle.css">
+        <script type="text/javascript" src="js/libs/jquery-2.1.1.js"></script>
+        <script type="text/javascript" src="js/libs/jquery.timer.js"></script>
+        <script type="text/javascript" src="js/libs/twitter.widgets.js"></script>
+        <script type="text/javascript" src="js/gameBasics.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {init();});
+        </script>
+        <audio id="blop" src="mp3/blop.mp3" preload="auto"></audio>
+        <audio id="gameMusic" src="mp4/gameMusic.mp4" preload="auto" autoplay="true" loop="true"></audio>
+        <audio id="bossMusic" src="mp4/bossMusic.mp4" preload="auto" loop="true"></audio>
+        <audio id="bonusSound" src="wav/bonus.wav" preload="auto"></audio>
+        <audio id="failSound" src="wav/fail.wav" preload="auto"></audio>
+    </head>
+    <body>
+        <div id="header">
+            <h1>Saving private <span style="color:red">RedSquare</span></h1>
+        </div>
+        <div id="hud">
+            <div id="scores">
+                <div id="currentScoreContainer">Score: <p id="currentScore">0</p></div>
+                <div id="bestScoreContainer">Best score: <p id="bestScore">0</p></div>
+            </div>
+            <!--
+            <div id="playGame">
+                <button id="playButton" type="button" onclick="playGame();">Play</button>
+            </div>
+            -->
+        </div>
+        <div id="game">
+            <canvas id="myCanvas" width="400px" height="564px"/>
+        </div>
+        <div id="howTo">
+            <h2>How to play:</h2>
+            <p>Avoid ennemies and go as far as you can to get the highest score!</br></br>
+        You control RedSquare and must save that square soldier from the evil rectangle squads. Control your glorious and handsome hero with the arrow keys. The rectangles are not square enough to dare facing you, but they will get faster and more numerous through the levels. They might prepare some surprises too, beware!</br></br>
+Use your energy wisely, or you will die! Fortunately, the Circle Queen sends her minions to help you defeat the Mad Rectangle King. Don't forget to grab those circle bonuses!
+            </p>
+        </div>
+<!--
+        <div id="infos">
+            <h2>Note:</h2>
+            <p></p>
+        </div>
+-->
+        <div id="social">
+            <div id="twitter">
+                <a href="https://twitter.com/Ben_Louradour" class="twitter-follow-button" data-show-count="false">Follow @Ben_Louradour</a>
+                <a id="shareScore" href=""></a>
+                <script>!function(d,s,id){
+                    var js, fjs=d.getElementsByTagName(s)[0], p=/^http:/.test(d.location)?'http':'https';
+                    if(!d.getElementById(id)){
+                        js=d.createElement(s);
+                        js.id=id;
+                        js.src=p+'://platform.twitter.com/widgets.js';
+                        fjs.parentNode.insertBefore(js,fjs);
+                    }
+                }(document, 'script', 'twitter-wjs');
+                </script>
+            </div>
+            <div id ="paypal">
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                    <input type="hidden" name="cmd" value="_s-xclick">
+                    <input type="hidden" name="hosted_button_id" value="LKC4SBJEKCHMU">
+                    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                    <img alt="" border="0" src="https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
