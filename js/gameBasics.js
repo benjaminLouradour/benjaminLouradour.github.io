@@ -2633,7 +2633,7 @@ function startPhaseBoss3(phase) {
             boss.losanges.push({x: -50, y: boss.lines[0].y, w: 90, h: 150});
             boss.losanges.push({x: wc + 150, y: boss.lines[1].y, w: 90, h: 150});
             boss.losanges.push({x: -100, y: boss.lines[2].y, w: 100, h: 180});
-        }, 1100, true));
+        }, 1800, true));
             
         timerOnce(function () {
             startPhaseBoss3(4);
@@ -3866,9 +3866,9 @@ function animateBoss3() {
             }
             boss.losanges[i].y += boss.speed;
             if (boss.losanges[i].y == boss.lines[1].y) {
-                boss.losanges[i].x -= 3.8;
+                boss.losanges[i].x -= 3.6;
             } else {
-                boss.losanges[i].x += 3.8;
+                boss.losanges[i].x += 3.6;
             }
         }
         
